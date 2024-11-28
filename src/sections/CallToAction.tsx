@@ -1,5 +1,5 @@
 export const CallToAction = () => {
-  return <section>CallToAction</section>;
+    return <section>CallToAction</section>;
 };
 
 export default CallToAction;

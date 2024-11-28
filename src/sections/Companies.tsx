@@ -6,34 +6,34 @@ import OutsideLogo from "../assets/images/outside-logo.svg";
 import CelestialLogo from "../assets/images/celestial-logo.svg";
 
 export const companies = [
-  {
-    name: "Acme Corp",
-    logo: AcmeCorpLogo,
-  },
-  {
-    name: "Echo Valley",
-    logo: EchoValleyLogo,
-  },
-  {
-    name: "Quantum",
-    logo: QuantumLogo,
-  },
-  {
-    name: "Pulse",
-    logo: PulseLogo,
-  },
-  {
-    name: "Outside",
-    logo: OutsideLogo,
-  },
-  {
-    name: "Celestial",
-    logo: CelestialLogo,
-  },
+    {
+        name: "Acme Corp",
+        logo: AcmeCorpLogo,
+    },
+    {
+        name: "Echo Valley",
+        logo: EchoValleyLogo,
+    },
+    {
+        name: "Quantum",
+        logo: QuantumLogo,
+    },
+    {
+        name: "Pulse",
+        logo: PulseLogo,
+    },
+    {
+        name: "Outside",
+        logo: OutsideLogo,
+    },
+    {
+        name: "Celestial",
+        logo: CelestialLogo,
+    },
 ];
 
 export const Companies = () => {
-  return <section>companies</section>;
+    return <section>companies</section>;
 };
 
 export default Companies;
