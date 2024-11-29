@@ -10,4 +10,14 @@
         --color-teal-300: theme(colors.teal.300);
         --color-gray-950: theme(colors.gray.950);
     }
+    .absolute-center {
+        @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+}
+
+/* Tailwind Auto complete for development purposes only */
+@layer utilities {
+    .debug {
+        @apply b;
+    }
 }
