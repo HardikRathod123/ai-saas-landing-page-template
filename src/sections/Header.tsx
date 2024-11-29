@@ -1,6 +1,6 @@
 "use client";
-import logoImage from "@/assets/images/sphereal-logo.svg?url";
 import { Button } from "@/components/Button";
+import { Logo } from "@/components/Logo";
 import { Orbit } from "@/components/Orbit";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -36,17 +36,11 @@ export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <>
-            <header className="border-border relative z-40 border-b">
+            <header className="relative z-40 border-b border-border">
                 <div className="container">
                     <div className="flex h-18 items-center justify-between lg:h-20">
                         <div className="flex items-center gap-4">
-                            <div
-                                className="size-10 bg-[conic-gradient(from_45deg,var(--color-violet-400),var(--color-fuchsia-400),var(--color-amber-300),var(--color-teal-300))]"
-                                style={{
-                                    maskImage: `url(${logoImage.src})`,
-                                    maskSize: "contain",
-                                }}
-                            ></div>
+                            <Logo />
                             <div className="text-2xl font-extrabold">
                                 sphereal.ai
                             </div>
