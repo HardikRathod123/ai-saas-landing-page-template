@@ -7,9 +7,8 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                primary:
-                    "border-2 border-transparent [background:linear-gradient(var(--color-gray-950),var(--color-gray-950))_padding-box,conic-gradient(from_45deg,var(--color-violet-400),var(--color-fuchsia-400),var(--color-amber-300),var(--color-teal-300))_border-box]",
-                secondary: "",
+                primary: "border-gradient",
+                secondary: "bg-gray-100 text-gray-950",
                 tertiary: "bg-gray-800 text-gray-200",
             },
             block: {

@@ -17,6 +17,9 @@ const config: Config = {
                 heading: ["var(--font-sora)", "sans-serif"],
                 body: ["var(--font-space-grotesk)", "sans-serif"],
             },
+            colors: {
+                border: "var(--color-border)",
+            },
             container: {
                 center: true,
                 padding: {
