@@ -1,3 +1,5 @@
+import { SectionBorder } from "@/components/SectionBorder";
+import Header from "@/sections/Header";
 import type { Metadata } from "next";
 import { Sora, Space_Grotesk } from "next/font/google";
 import "./globals.css";
@@ -28,7 +30,10 @@ export default function RootLayout({
             <body
                 className={`${soraFont.variable} ${spaceGroteskFont.variable} bg-gray-950 pb-[10000px] font-body text-gray-300 antialiased`}
             >
-                {children}
+                <Header />
+                <div className="container">
+                    <SectionBorder>{children}</SectionBorder>
+                </div>
             </body>
         </html>
     );
