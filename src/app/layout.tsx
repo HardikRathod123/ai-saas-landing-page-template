@@ -26,7 +26,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${soraFont.variable} ${spaceGroteskFont.variable} bg-gray-950 font-body text-gray-300 antialiased`}
+                className={`${soraFont.variable} ${spaceGroteskFont.variable} bg-gray-950 pb-[10000px] font-body text-gray-300 antialiased`}
             >
                 {children}
             </body>

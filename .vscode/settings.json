@@ -12,5 +12,5 @@
         "source.organizeImports": "always",
         "source.fixAll": "always"
     },
-    "cSpell.words": ["tailwindcss", "Blockforge"]
+    "cSpell.words": ["tailwindcss", "sphereal"]
 }
