@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentPropsWithRef } from "react";
 
-const planetVariants = cva("rounded-full bg-gradient-to-b to-gray-950", {
+export const planetVariants = cva("rounded-full bg-gradient-to-b to-gray-950", {
     variants: {
         size: {
             sm: "size-4",
