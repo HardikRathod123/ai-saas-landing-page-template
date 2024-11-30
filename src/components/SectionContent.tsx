@@ -8,7 +8,10 @@ export const SectionContent = ({
 }: ComponentPropsWithoutRef<"div">) => {
     return (
         <div
-            className={cn("container py-24 md:py-36 lg:py-48", className)}
+            className={cn(
+                "container overflow-hidden py-24 md:py-36 lg:py-48",
+                className,
+            )}
             {...rest}
         >
             {children}
