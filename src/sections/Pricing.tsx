@@ -64,7 +64,7 @@ export const pricingTiers = [
 
 export const Pricing = () => {
     return (
-        <section>
+        <section id="pricing">
             <SectionDivider />
             <SectionContent>
                 <h2 className="text-center text-3xl font-semibold leading-tight text-gray-200 md:text-4xl lg:text-5xl">

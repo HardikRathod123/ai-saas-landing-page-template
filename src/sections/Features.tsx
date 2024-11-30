@@ -65,7 +65,7 @@ export const logos = [
 
 export const Features = () => {
     return (
-        <section className="overflow-hidden">
+        <section className="overflow-hidden" id="features">
             <SectionDivider />
             <SectionContent className="md:px-20 lg:px-40">
                 <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">

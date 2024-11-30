@@ -1,3 +1,4 @@
+"use client";
 import {
     faDiscord,
     faXTwitter,
@@ -54,6 +55,15 @@ export const Footer = () => {
                                 key={name}
                                 href={href}
                                 className="text-xs font-bold uppercase tracking-widest text-gray-400"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    const element =
+                                        document.querySelector(href);
+                                    if (element)
+                                        element.scrollIntoView({
+                                            behavior: "smooth",
+                                        });
+                                }}
                             >
                                 {name}
                             </a>

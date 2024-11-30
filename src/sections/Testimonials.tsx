@@ -38,7 +38,7 @@ export const testimonials = [
 const SELECTED_TESTIMONIAL_INDEX = 0;
 export const Testimonials = () => {
     return (
-        <section>
+        <section id="testimonials">
             <SectionDivider />
             <SectionContent>
                 <div className="border-gradient relative flex flex-col gap-12 rounded-3xl px-6 py-16 md:mx-10 md:flex-row md:px-10 lg:mx-20 lg:px-16 lg:py-24">

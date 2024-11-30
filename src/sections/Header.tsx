@@ -52,6 +52,17 @@ export const Header = () => {
                                         key={href}
                                         href={href}
                                         className="relative inline-flex h-full items-center px-10 text-xs font-bold uppercase tracking-widest text-gray-400 before:absolute before:bottom-0 before:left-0 before:h-2 before:w-px before:bg-gray-200/20 before:content-[''] after:absolute after:bottom-0 after:right-0 after:hidden after:h-2 after:w-px after:bg-gray-200/20 after:content-[''] last:after:block"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            const element =
+                                                document.querySelector(href);
+                                            if (element) {
+                                                setIsMenuOpen(false);
+                                                element.scrollIntoView({
+                                                    behavior: "smooth",
+                                                });
+                                            }
+                                        }}
                                     >
                                         {name}
                                     </a>
@@ -118,6 +129,17 @@ export const Header = () => {
                                     key={href}
                                     href={href}
                                     className="h-10 text-xs uppercase tracking-widest text-gray-400"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        const element =
+                                            document.querySelector(href);
+                                        if (element) {
+                                            setIsMenuOpen(false);
+                                            element.scrollIntoView({
+                                                behavior: "smooth",
+                                            });
+                                        }
+                                    }}
                                 >
                                     {name}
                                 </a>
