@@ -2,7 +2,8 @@ import { Button } from "@/components/Button";
 import { Logo } from "@/components/Logo";
 import { Orbit } from "@/components/Orbit";
 import { SectionContent } from "@/components/SectionContent";
-import { faCircleCheck, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { SectionDivider } from "@/components/SectionDivider";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import dockerLogo from "../assets/images/docker-logo.png";
@@ -64,22 +65,8 @@ export const logos = [
 
 export const Features = () => {
     return (
-        <section className="">
-            <div className="h-px w-full bg-border"></div>
-            <div className="relative">
-                <div className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2">
-                    <FontAwesomeIcon
-                        icon={faPlus}
-                        className="size-4 text-gray-200"
-                    />
-                </div>
-                <div className="absolute right-0 top-0 -translate-y-1/2 translate-x-1/2">
-                    <FontAwesomeIcon
-                        icon={faPlus}
-                        className="size-4 text-gray-200"
-                    />
-                </div>
-            </div>
+        <section className="overflow-hidden">
+            <SectionDivider />
             <SectionContent className="md:px-20 lg:px-40">
                 <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
                     <div>
