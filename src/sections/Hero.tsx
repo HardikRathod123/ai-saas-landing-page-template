@@ -1,10 +1,10 @@
 import Loader from "@/assets/images/loader.svg";
 import robotImage from "@/assets/images/robot.jpg";
-import underlineImage from "@/assets/images/underline.svg?url";
 import { Button } from "@/components/Button";
 import { Orbit } from "@/components/Orbit";
 import { Planet } from "@/components/Planet";
 import { SectionContent } from "@/components/SectionContent";
+import { UnderlineText } from "@/components/UnderlineText";
 import Image from "next/image";
 
 const orbitsSizes = ["350px", "600px", "850px", "1100px", "1350px"];
@@ -31,18 +31,7 @@ export const Hero = () => {
                 {/* Content */}
                 <h1 className="text-center text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl">
                     Unlock the Future of AI Conversations with{" "}
-                    <span className="relative">
-                        <span>Sphereal</span>
-                        <span
-                            className="absolute left-0 top-full h-4 w-full -translate-y-1/2 bg-[linear-gradient(to_right,var(--color-amber-300),var(--color-teal-300),var(--color-violet-400),var(--color-fuchsia-400))]"
-                            style={{
-                                maskImage: `url(${underlineImage.src})`,
-                                maskSize: "contain",
-                                maskPosition: "center",
-                                maskRepeat: "no-repeat",
-                            }}
-                        ></span>
-                    </span>
+                    <UnderlineText text="Sphereal" />
                 </h1>
                 <p className="mx-auto mt-8 max-w-3xl text-center text-lg md:text-xl">
                     Harness the power of AI with Sphereal. Elevate your

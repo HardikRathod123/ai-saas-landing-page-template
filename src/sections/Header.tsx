@@ -36,7 +36,7 @@ export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <>
-            <header className="relative z-40 border-b border-border">
+            <header className="relative z-40">
                 <div className="container">
                     <div className="flex h-18 items-center justify-between lg:h-20">
                         <div className="flex items-center gap-4">

@@ -31,7 +31,7 @@ export default function RootLayout({
                 className={`${soraFont.variable} ${spaceGroteskFont.variable} bg-gray-950 pb-[10000px] font-body text-gray-300 antialiased`}
             >
                 <Header />
-                <div className="container">
+                <div className="container border-y border-border">
                     <SectionBorder>{children}</SectionBorder>
                 </div>
             </body>
