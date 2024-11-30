@@ -66,6 +66,18 @@ export const logos = [
 ];
 
 export const Features = () => {
+    const generateRotationKeyframes = (startRotation: number, steps = 8) => {
+        const keyframes = [];
+        const stepSize = Math.abs(45); // Always positive step size
+        const direction = startRotation >= 0 ? 1 : -1; // Determine direction based on start rotation
+
+        for (let i = 0; i <= steps; i++) {
+            const rotation = startRotation + direction * i * stepSize;
+            // Add each angle twice to create a pause effect
+            keyframes.push(rotation, rotation);
+        }
+        return keyframes;
+    };
     return (
         <section className="overflow-hidden" id="features">
             <SectionDivider />
@@ -110,25 +122,9 @@ export const Features = () => {
                                     key={alt}
                                     initial={{ rotate }}
                                     animate={{
-                                        rotate: [
+                                        rotate: generateRotationKeyframes(
                                             rotate,
-                                            rotate + 45,
-                                            rotate + 45,
-                                            rotate + 90,
-                                            rotate + 90,
-                                            rotate + 135,
-                                            rotate + 135,
-                                            rotate + 180,
-                                            rotate + 180,
-                                            rotate + 225,
-                                            rotate + 225,
-                                            rotate + 270,
-                                            rotate + 270,
-                                            rotate + 315,
-                                            rotate + 315,
-                                            rotate + 360,
-                                            rotate + 360,
-                                        ],
+                                        ),
                                     }}
                                     transition={{
                                         duration: 10,
@@ -143,25 +139,9 @@ export const Features = () => {
                                             translate: "-50% -50%",
                                         }}
                                         animate={{
-                                            rotate: [
+                                            rotate: generateRotationKeyframes(
                                                 -rotate,
-                                                -rotate - 45,
-                                                -rotate - 45,
-                                                -rotate - 90,
-                                                -rotate - 90,
-                                                -rotate - 135,
-                                                -rotate - 135,
-                                                -rotate - 180,
-                                                -rotate - 180,
-                                                -rotate - 225,
-                                                -rotate - 225,
-                                                -rotate - 270,
-                                                -rotate - 270,
-                                                -rotate - 315,
-                                                -rotate - 315,
-                                                -rotate - 360,
-                                                -rotate - 360,
-                                            ],
+                                            ),
                                         }}
                                         transition={{
                                             duration: 10,
