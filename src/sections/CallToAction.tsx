@@ -1,11 +1,25 @@
+"use client";
 import { Button } from "@/components/Button";
 import { Orbit } from "@/components/Orbit";
 import { Planet } from "@/components/Planet";
 import { SectionContent } from "@/components/SectionContent";
 import { SectionDivider } from "@/components/SectionDivider";
 import { UnderlineText } from "@/components/UnderlineText";
+import { useMousePosition } from "@/hooks/useMousePosition";
+import { motion, useSpring, useTransform } from "framer-motion";
 
 export const CallToAction = () => {
+    const { xProgress, yProgress } = useMousePosition();
+    const springX = useSpring(xProgress);
+    const springY = useSpring(yProgress);
+
+    const translateLargeX = useTransform(springX, [0, 1], ["-25%", "25%"]);
+    const translateLargeY = useTransform(springY, [0, 1], ["-25%", "25%"]);
+    const translateMediumX = useTransform(springX, [0, 1], ["-50%", "50%"]);
+    const translateMediumY = useTransform(springY, [0, 1], ["-50%", "50%"]);
+    const translateSmallX = useTransform(springX, [0, 1], ["-200%", "200%"]);
+    const translateSmallY = useTransform(springY, [0, 1], ["-200%", "200%"]);
+
     return (
         <section>
             <SectionDivider />
@@ -22,36 +36,60 @@ export const CallToAction = () => {
                 </div>
                 {/* Planets */}
                 <div className="absolute-center -z-10">
-                    <Planet
-                        size={"lg"}
-                        color="violet"
-                        className="-translate-x-[200px] translate-y-[255px] rotate-45"
-                    />
-                    <Planet
-                        size={"lg"}
-                        color="violet"
-                        className="-translate-y-[175px] translate-x-[200px] -rotate-135"
-                    />
-                    <Planet
-                        size={"md"}
-                        color="teal"
-                        className="-translate-x-[495px] -translate-y-[5px] rotate-90"
-                    />
-                    <Planet
-                        size={"md"}
-                        color="teal"
-                        className="-translate-y-[130px] translate-x-[505px] -rotate-135"
-                    />
-                    <Planet
-                        size={"sm"}
-                        color="fuchsia"
-                        className="-translate-x-[390px] -translate-y-[298px] rotate-135"
-                    />
-                    <Planet
-                        size={"sm"}
-                        color="fuchsia"
-                        className="translate-x-[410px] translate-y-[85px] -rotate-45"
-                    />
+                    <motion.div
+                        style={{ x: translateLargeX, y: translateLargeY }}
+                    >
+                        <Planet
+                            size={"lg"}
+                            color="violet"
+                            className="-translate-x-[200px] translate-y-[255px] rotate-45"
+                        />
+                    </motion.div>
+                    <motion.div
+                        style={{ x: translateLargeX, y: translateLargeY }}
+                    >
+                        <Planet
+                            size={"lg"}
+                            color="violet"
+                            className="-translate-y-[175px] translate-x-[200px] -rotate-135"
+                        />
+                    </motion.div>
+                    <motion.div
+                        style={{ x: translateMediumX, y: translateMediumY }}
+                    >
+                        <Planet
+                            size={"md"}
+                            color="teal"
+                            className="-translate-x-[495px] -translate-y-[5px] rotate-90"
+                        />
+                    </motion.div>
+                    <motion.div
+                        style={{ x: translateMediumX, y: translateMediumY }}
+                    >
+                        <Planet
+                            size={"md"}
+                            color="teal"
+                            className="-translate-y-[130px] translate-x-[505px] -rotate-135"
+                        />
+                    </motion.div>
+                    <motion.div
+                        style={{ x: translateSmallX, y: translateSmallY }}
+                    >
+                        <Planet
+                            size={"sm"}
+                            color="fuchsia"
+                            className="-translate-x-[390px] -translate-y-[298px] rotate-135"
+                        />
+                    </motion.div>
+                    <motion.div
+                        style={{ x: translateSmallX, y: translateSmallY }}
+                    >
+                        <Planet
+                            size={"sm"}
+                            color="fuchsia"
+                            className="translate-x-[410px] translate-y-[85px] -rotate-45"
+                        />
+                    </motion.div>
                 </div>
                 {/* Content */}
                 <div className="mx-auto max-w-2xl">

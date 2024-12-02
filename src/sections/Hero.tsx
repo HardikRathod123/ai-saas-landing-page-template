@@ -6,57 +6,12 @@ import { Orbit } from "@/components/Orbit";
 import { Planet } from "@/components/Planet";
 import { SectionContent } from "@/components/SectionContent";
 import { UnderlineText } from "@/components/UnderlineText";
-import {
-    motion,
-    useMotionValue,
-    useScroll,
-    useSpring,
-    useTransform,
-} from "framer-motion";
+import { useMousePosition } from "@/hooks/useMousePosition";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 const orbitsSizes = ["350px", "600px", "850px", "1100px", "1350px"];
-
-const useMousePosition = () => {
-    const [innerWidth, setInnerWidth] = useState(1);
-    const [innerHeight, setInnerHeight] = useState(1);
-    const clientX = useMotionValue(0);
-    const clientY = useMotionValue(0);
-    const xProgress = useTransform(clientX, [0, innerWidth], [0, 1]);
-    const yProgress = useTransform(clientY, [0, innerHeight], [0, 1]);
-
-    useEffect(() => {
-        setInnerWidth(window.innerWidth);
-        setInnerHeight(window.innerHeight);
-        window.addEventListener("resize", () => {
-            setInnerWidth(window.innerWidth);
-            setInnerHeight(window.innerHeight);
-        });
-
-        return () => {
-            window.removeEventListener("resize", () => {
-                setInnerWidth(window.innerWidth);
-                setInnerHeight(window.innerHeight);
-            });
-        };
-    }, []);
-
-    useEffect(() => {
-        window.addEventListener("mousemove", (event) => {
-            clientX.set(event.clientX);
-            clientY.set(event.clientY);
-        });
-        return () => {
-            window.removeEventListener("mousemove", (event) => {
-                clientX.set(event.clientX);
-                clientY.set(event.clientY);
-            });
-        };
-    }, []);
-
-    return { xProgress, yProgress };
-};
 
 export const Hero = () => {
     const sectionRef = useRef(null);
